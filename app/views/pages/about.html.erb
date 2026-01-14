@@ -1,0 +1,83 @@
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 py-10">
+  
+  <!-- Sidebar / Role Title -->
+  <div class="md:col-span-4 lg:col-span-3 space-y-8 sticky top-32 self-start">
+    <div>
+      <h2 class="text-sm uppercase tracking-widest text-secondary font-medium mb-2">Role</h2>
+      <p class="text-xl font-bold text-primary">CS Student & <br/>Full Stack Developer</p>
+    </div>
+    
+    <div>
+      <h2 class="text-sm uppercase tracking-widest text-secondary font-medium mb-2">Location</h2>
+      <p class="text-primary font-medium">Remote / On-site</p>
+    </div>
+
+    <div>
+      <h2 class="text-sm uppercase tracking-widest text-secondary font-medium mb-2">Connect</h2>
+      <div class="flex flex-col gap-2"> 
+        <a href="#" class="no-underline text-secondary hover:text-primary transition-colors">LinkedIn</a>
+        <a href="#" class="no-underline text-secondary hover:text-primary transition-colors">GitHub</a>
+        <a href="#" class="no-underline text-secondary hover:text-primary transition-colors">Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="md:col-span-8 lg:col-span-9 space-y-24">
+    
+    <!-- Bio -->
+    <section>
+      <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-12">
+        About Me
+      </h1>
+      <div class="text-xl md:text-2xl leading-relaxed text-secondary font-light space-y-8 max-w-3xl">
+        <p class="text-primary">
+          Hi! I'm Arsh. I believe that good code is like good design — invisible but powerful.
+        </p>
+        <p>
+           My journey into coding started with curiosity and has evolved into a disciplined pursuit of building scalable, user-centric applications. I combine technical depth in Ruby on Rails and React with a sharp eye for minimalist aesthetics.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="border-t border-gray-200 pt-16">
+      <h2 class="text-3xl font-bold text-primary mb-12">Experience</h2>
+      
+      <div class="space-y-12">
+        <div class="group grid grid-cols-1 md:grid-cols-4 gap-4 transition-all">
+          <div class="text-secondary font-mono text-sm">2023 - Present</div>
+          <div class="md:col-span-3 space-y-2">
+            <h3 class="text-xl font-bold text-primary">B.Sc. Computer Science</h3>
+            <p class="text-secondary">University of Technology</p>
+          </div>
+        </div>
+
+        <div class="group grid grid-cols-1 md:grid-cols-4 gap-4 transition-all">
+          <div class="text-secondary font-mono text-sm">2024</div>
+          <div class="md:col-span-3 space-y-2">
+            <h3 class="text-xl font-bold text-primary">Full Stack Intern</h3>
+            <p class="text-secondary">Tech Solutions Inc.</p>
+            <p class="text-gray-500 mt-2 text-sm max-w-xl">
+              Assisted in developing internal tools using React and Node.js. Optimized database queries improving report generation time by 40%.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="border-t border-gray-200 pt-16">
+       <h2 class="text-3xl font-bold text-primary mb-12">Technical Skills</h2>
+       <div class="flex flex-wrap gap-4">
+          <% ["Ruby on Rails", "JavaScript", "React.js", "Tailwind CSS", "PostgreSQL", "Git", "Python", "Docker"].each do |skill| %>
+            <span class="px-6 py-3 border border-gray-200 rounded-full text-secondary hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                <%= skill %>
+            </span>
+          <% end %>
+       </div>
+    </section>
+
+  </div>
+</div>
+

@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
-    <title><%= content_for(:title) || "Myweb" %></title>
+    <title><%= content_for(:title) || "Arsh | CS Portfolio" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Myweb">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <%= yield :head %>
 
@@ -23,9 +27,54 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="h-full anti-aliased selection:bg-primary selection:text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 minimal-nav transition-all duration-300">
+      <div class="container mx-auto px-6 h-24 flex items-center justify-between">
+        <!-- Logo -->
+        <%= link_to root_path, class: "flex items-center gap-2 group" do %>
+          <div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold text-xl group-hover:scale-110 transition-transform">
+            A
+          </div>
+          <span class="text-xl font-bold tracking-tight group-hover:opacity-70 transition-opacity">ARSH.DEV</span>
+        <% end %>
+
+        <div class="hidden md:flex items-center space-x-12">
+          <%= link_to "About Me", about_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "Portfolio", projects_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "Services", "#", class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "Blog", "#", class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+        </div>
+
+        <%= link_to contact_path, class: "hidden md:flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4" do %>
+          Book A Call 
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        <% end %>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-primary p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <main class="pt-24 min-h-screen">
       <%= yield %>
     </main>
+    
+    <footer class="border-t border-gray-100 py-12 mt-20 bg-tertiary">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-secondary text-sm">&copy; <%= Time.current.year %> Arsh. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">Instagram</a>
+              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">LinkedIn</a>
+              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">Dribbble</a>
+            </div>
+        </div>
+    </footer>
   </body>
 </html>
