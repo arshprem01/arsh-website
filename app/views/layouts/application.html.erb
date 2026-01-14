@@ -33,26 +33,16 @@
       <div class="container mx-auto px-6 h-24 flex items-center justify-between">
         <!-- Logo -->
         <%= link_to root_path, class: "flex items-center gap-2 group" do %>
-          <div class="w-10 h-10 bg-primary text-white flex items-center justify-center rounded-full font-bold text-xl group-hover:scale-110 transition-transform">
-            A
-          </div>
-          <span class="text-xl font-bold tracking-tight group-hover:opacity-70 transition-opacity">ARSH.DEV</span>
+          <span class="text-3xl font-black tracking-tighter group-hover:opacity-70 transition-opacity">ARSH PREM</span>
         <% end %>
 
         <div class="hidden md:flex items-center space-x-12">
           <%= link_to "About Me", about_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
-          <%= link_to "Portfolio", projects_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
-          <%= link_to "Services", "#", class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
-          <%= link_to "Blog", "#", class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "MY WORKs", projects_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "Certificates", certificates_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
+          <%= link_to "Blog", blog_path, class: "text-secondary hover:text-primary transition-colors text-sm font-medium tracking-wide uppercase" %>
         </div>
-
-        <%= link_to contact_path, class: "hidden md:flex items-center gap-2 text-primary font-medium hover:underline underline-offset-4" do %>
-          Book A Call 
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        <% end %>
-
+        
         <!-- Mobile Menu Button -->
         <button class="md:hidden text-primary p-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,11 +58,10 @@
     
     <footer class="border-t border-gray-100 py-12 mt-20 bg-tertiary">
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-secondary text-sm">&copy; <%= Time.current.year %> Arsh. All rights reserved.</p>
+
             <div class="flex gap-6">
-              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">Instagram</a>
-              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">LinkedIn</a>
-              <a href="#" class="text-secondary hover:text-primary transition-colors text-sm uppercase">Dribbble</a>
+              <a href="https://www.linkedin.com/in/arsh-prem-0606542b7" target="_blank" class="text-secondary hover:text-primary transition-colors text-sm uppercase">LinkedIn</a>
+              <a href="https://github.com/arshprem01" target="_blank" class="text-secondary hover:text-primary transition-colors text-sm uppercase">GitHub</a>
             </div>
         </div>
     </footer>

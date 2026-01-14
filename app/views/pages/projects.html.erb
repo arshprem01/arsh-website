@@ -3,10 +3,10 @@
   <div class="space-y-4 max-w-3xl">
     <div class="flex items-center gap-4 text-secondary">
       <span class="w-12 h-[1px] bg-secondary"></span>
-      <span class="uppercase tracking-widest text-sm font-medium">Portfolio</span>
+      <span class="uppercase tracking-widest text-sm font-medium">My Works</span>
     </div>
     <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary">
-      Selected Works
+      My Works
     </h1>
     <p class="text-secondary text-xl font-light max-w-2xl">
       A curation of digital products, websites, and experiences I've crafted.
@@ -17,12 +17,9 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
     <% # Placeholder Data %>
     <% projects = [
-      { title: "E-Commerce Platform", desc: "A full-stack shopping platform built with Rails & React.", category: "Web Development" },
-      { title: "AI Chat Assistant", desc: "Real-time chat interface powered by OpenAI API.", category: "Artificial Intelligence" },
-      { title: "Task Manager", desc: "Productivity simplified with drag-and-drop kanban boards.", category: "Productivity Tool" },
-      { title: "Portfolio v1", desc: "My previous portfolio site built with pure HTML/CSS.", category: "Design" },
-      { title: "Weather App", desc: "Location-based weather forecasting using OpenWeatherMap.", category: "Mobile App" },
-      { title: "Algo Visualizer", desc: "Visualizing sorting algorithms for educational purposes.", category: "Education" }
+      { title: "P2P File Sharing System", desc: "Decentralized file sharing with XState & WebRTC.", category: "Web Development" },
+      { title: "Road Accident Prediction", desc: "ML-powered prediction system with Streamlit UI.", category: "Machine Learning" },
+      { title: "Flowbite Blog", desc: "Production-ready Rails blog with custom auth.", category: "Web Development" }
     ] %>
 
     <% projects.each_with_index do |project, index| %>

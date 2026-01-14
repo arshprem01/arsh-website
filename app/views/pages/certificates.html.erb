@@ -1,0 +1,45 @@
+<div class="space-y-20 py-10">
+  <!-- Page Header -->
+  <div class="space-y-4 max-w-3xl">
+    <div class="flex items-center gap-4 text-secondary">
+      <span class="w-12 h-[1px] bg-secondary"></span>
+      <span class="uppercase tracking-widest text-sm font-medium">Achievements</span>
+    </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary">
+      Certificates
+    </h1>
+    <p class="text-secondary text-xl font-light max-w-2xl">
+      Professional certifications and recognitions.
+    </p>
+  </div>
+
+  <!-- Certificates Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+    <% certificates = [
+      { title: "IBM Full Stack Software Developer", issuer: "IBM", date: "2024", desc: "Professional Certificate covering Cloud Computing, DevOps, and Full Stack Development." },
+      { title: "Guest Lecture – Appreciation Certificate", issuer: "SRM Institute of Science and Technology", date: "2024", desc: "Delivered a guest lecture on “Arduino Basics” at a National-Level Technical Workshop." }
+    ] %>
+
+    <% certificates.each_with_index do |cert, index| %>
+      <div class="group flex flex-col space-y-6 cursor-pointer">
+        <!-- Certificate Image Placeholder -->
+        <div class="aspect-[4/3] bg-tertiary overflow-hidden border border-gray-100">
+          <div class="w-full h-full bg-gray-50 group-hover:bg-gray-100 transition-colors duration-500 relative flex items-center justify-center">
+             <span class="text-4xl opacity-20 group-hover:opacity-40 transition-opacity">CERT</span>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="flex justify-between items-baseline border-b border-gray-200 pb-4 group-hover:border-primary transition-colors">
+            <h3 class="text-xl font-bold text-primary max-w-[80%]"><%= cert[:title] %></h3>
+            <span class="text-sm text-secondary group-hover:text-primary transition-colors"><%= cert[:date] %></span>
+          </div>
+          <div class="space-y-1">
+             <p class="text-secondary font-medium uppercase tracking-wide text-xs"><%= cert[:issuer] %></p>
+             <p class="text-gray-500 text-sm leading-relaxed"><%= cert[:desc] %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
